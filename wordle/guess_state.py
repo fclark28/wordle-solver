@@ -14,7 +14,6 @@ class GuessState:
         self.__removeLetter(guess[i])
       elif result[i] == constants.WRONG_PLACE:
         self.mask[i].discard(guess[i])
-        # self.iso.append(guess[i])
         if guess[i] in isoMap: isoMap[guess[i]] += 1
         else: isoMap[guess[i]] = 1
       else:
